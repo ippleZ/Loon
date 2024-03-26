@@ -1,10 +1,6 @@
-#!name = 高德地图去广告
-#!desc = 过滤高德地图广告
-#!openUrl = 
-#!author = 
-#!homepage = 
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
-#!date = 
+#!name= 高德地图去广告
+#!desc= 过滤高德地图广告
+#!icon= https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Amap.png
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
