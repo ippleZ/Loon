@@ -1,10 +1,6 @@
 #!name = 百度搜索去广告
 #!desc = 过滤百度搜索广告
-#!openUrl = 
-#!author = 
-#!homepage = 
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Baidu.png
-#!date = 
 
 [Rewrite]
 ^https?:\/\/m\.baidu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.10.1 (Baidu; P2 17.0)
