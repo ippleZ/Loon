@@ -7,7 +7,7 @@
 #!date = 
 
 [Rewrite]
-^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.10.1 (Baidu; P2 17.0)
+^https?:\/\/m\.baidu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.10.1 (Baidu; P2 17.0)
 
 [Mitm]
-hostname = *.baidu.com
+hostname = m.baidu.com
