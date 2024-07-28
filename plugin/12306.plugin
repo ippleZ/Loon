@@ -1,7 +1,6 @@
 #!name = 12306去广告
 #!desc = 过滤12306应用内广告及开屏广告
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/12306.png
-#!date = 2024-02-20 17:20:29
 
 [Rule]
 # 放行规则
