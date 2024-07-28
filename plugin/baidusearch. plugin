@@ -2,8 +2,8 @@
 #!desc = 移除百度搜索移动端网页的首页广告信息流
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Baidu.png
 
-[Script]
-http-response ^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body = true, tag = 移除百度搜索首页信息流广告
+[Rewrite]
+^https?:\/\/m\.baidu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.10.1 (Baidu; P2 17.0)
 
 [Mitm]
 hostname = m.baidu.com, baijiahao.baidu.com, baike.baidu.com
