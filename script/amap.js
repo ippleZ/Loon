@@ -1,8 +1,3 @@
-/*
-引用地址https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
-*/
-// 2024-02-20 19:55
-
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
