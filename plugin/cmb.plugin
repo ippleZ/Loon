@@ -1,0 +1,10 @@
+#!name = 招商银行
+#!tag = 工具
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ColorfulClouds.png
+#!date = 2024-09-05 10:51:41
+hostname = mobile.cmbchina.com
+^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar url script-response-body https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js
+^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow url script-response-body https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js
