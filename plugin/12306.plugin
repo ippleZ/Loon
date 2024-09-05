@@ -1,6 +1,6 @@
 #!name = 12306去广告
 #!desc = 过滤12306应用内广告及开屏广告
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/12306.png
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/12306.png
 
 [Rule]
 # 放行规则
