@@ -7,7 +7,7 @@
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu.png
 
 [Rewrite]
-^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace user-agent Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.10.1 (Baidu; P2 17.0)
+^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace user-agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2017_0\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Mobile/15E148\x20SearchCraft/3.10.1\x20(Baidu;\x20P2\x2017.0)
 
 [Mitm]
 hostname = *.baidu.com
