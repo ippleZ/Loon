@@ -9,7 +9,8 @@
 #!date = 2024-09-06 09:11:11
 
 [Script]
-^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar url script-response-body https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js
-^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow url script-response-body https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js
-[MitM]
+http-response ^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar script-path=https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js, requires-body=true, timeout=60, tag=cmb
+http-response ^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow script-path=https://raw.githubusercontent.com/ippleZ/Quan/master/script/cmb.js, requires-body=true, timeout=60, tag=cmb
+
+[MITM]
 hostname = mobile.cmbchina.com
