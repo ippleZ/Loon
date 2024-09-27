@@ -25,9 +25,9 @@ if (url.includes('/iincomereport/income/calendar')) {
     
     if (obj.bizResult?.data?.prdDtl) {
         obj.bizResult.data.prdDtl.forEach(item => {
-            // 仅在产品名称不在排除列表时，将 prdErn 乘以 50
+            // 仅在产品名称不在排除列表时，将 prdErn 乘以 5
             if (item.prdErn && !excludeNames.includes(item.prdName)) {
-                item.prdErn = (parseFloat(item.prdErn) * 50).toFixed(2).toString();
+                item.prdErn = (parseFloat(item.prdErn) * 5).toFixed(2).toString();
             }
         });
     }
