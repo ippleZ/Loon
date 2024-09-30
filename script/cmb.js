@@ -16,7 +16,7 @@ function processErnMon(value) {
 // 定义函数用于处理通用乘法逻辑
 function processValue(value) {
     let num = parseFloat(value);
-    return num ? (num * 2.5).toFixed(2) : value;
+    return num ? (num * 3).toFixed(2) : value;
 }
 
 if (url.includes('/iincomereport/income/calendar')) {
