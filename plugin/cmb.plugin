@@ -11,8 +11,8 @@ ernMonFactor = input,"2",tag=[ernMon乘法因子],desc=设置ernMon乘法因子
 prdErnFactor = input,"3",tag=[prdErn乘法因子],desc=设置prdErn乘法因子
 
 [Script]
-http-response ^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, timeout=60, tag=cmb
-http-response ^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, timeout=60, tag=cmb
+http-response ^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, tag=cmb, argument={ernMonFactor}
+http-response ^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, tag=cmb, argument={prdErnFactor}
 
 [MITM]
 hostname = mobile.cmbchina.com
