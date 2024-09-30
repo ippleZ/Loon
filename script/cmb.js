@@ -49,6 +49,10 @@ if (url.includes('/iincomereport/income/calendar')) {
     // 将 prdErn 的总和赋值给 ernZone
     if (obj.bizResult?.data?.ernInfo) {
         obj.bizResult.data.ernInfo.ernZone = totalPrdErn.toFixed(2);
+        // 将 pctZone 乘以 5
+        if (obj.bizResult.data.ernInfo.pctZone) {
+            obj.bizResult.data.ernInfo.pctZone = (parseFloat(obj.bizResult.data.ernInfo.pctZone) * 5).toFixed(2);
+        }
     }
 
     $done({ body: JSON.stringify(obj) });
