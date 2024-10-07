@@ -10,12 +10,6 @@
 # 米家
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 [Rewrite]
-# 航旅纵横
-## 首页悬浮标签 //home.umetrip.com
-^http:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-## 我的页面轮播图 //umerp.umetrip.com
-^http:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native reject
-
 # 和风天气 //hfapp-service.qweather.net
 ^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? reject-dict
 
@@ -27,4 +21,4 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
 
 [Mitm]
-hostname = home.umetrip.com, umerp.umetrip.com, hfapp-service.qweather.net, home.mi.com, s3gw.cmbimg.com
+hostname = hfapp-service.qweather.net, home.mi.com, s3gw.cmbimg.com
