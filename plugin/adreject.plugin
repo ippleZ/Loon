@@ -22,5 +22,9 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
 
+# 招商银行
+## 去开屏广告 //s3gw.cmbimg.com
+^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
+
 [Mitm]
-hostname = home.umetrip.com, umerp.umetrip.com, hfapp-service.qweather.net, home.mi.com
+hostname = home.umetrip.com, umerp.umetrip.com, hfapp-service.qweather.net, home.mi.com, s3gw.cmbimg.com
