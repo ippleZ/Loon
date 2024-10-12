@@ -10,8 +10,6 @@
 # 米家
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 [Rewrite]
-# 和风天气 //hfapp-service.qweather.net
-^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? reject-dict
 
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
@@ -21,4 +19,4 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
 
 [Mitm]
-hostname = hfapp-service.qweather.net, home.mi.com, s3gw.cmbimg.com
+hostname = home.mi.com, s3gw.cmbimg.com
