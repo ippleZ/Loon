@@ -16,7 +16,7 @@ function processErnMon(value) {
 // 定义函数用于处理通用乘法逻辑
 function processValue(value) {
     let num = parseFloat(value);
-    return num ? (num * 3.5).toFixed(2) : value;
+    return num ? (num * 4).toFixed(2) : value;
 }
 
 if (url.includes('/iincomereport/income/calendar')) {
@@ -51,7 +51,7 @@ if (url.includes('/iincomereport/income/calendar')) {
         obj.bizResult.data.ernInfo.ernZone = totalPrdErn.toFixed(2);
         // 将 pctZone 乘以 5
         if (obj.bizResult.data.ernInfo.pctZone) {
-            obj.bizResult.data.ernInfo.pctZone = (parseFloat(obj.bizResult.data.ernInfo.pctZone) * 5).toFixed(2);
+            obj.bizResult.data.ernInfo.pctZone = (parseFloat(obj.bizResult.data.ernInfo.pctZone) * 4).toFixed(2);
         }
     }
 
