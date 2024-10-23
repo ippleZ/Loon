@@ -1,20 +1,21 @@
 #!name = 各种去广告
-#!desc = 过滤高德地图广告
+#!desc = 各种应用去广告
 #!tag = 去广告
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/KeLee.png
-#!date = 2024-09-29 08:59:59
+#!date = 2024-10-23 22:59:59
 
 [Rule]
 # 米家
 DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 [Rewrite]
+# 百度搜索 //*.baidu.com
+^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace user-agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2017_0\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Mobile/15E148\x20SearchCraft/3.10.1\x20(Baidu;\x20P2\x2017.0)
 
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
 
-# 招商银行
-## 去开屏广告 //s3gw.cmbimg.com
+# 招商银行 //s3gw.cmbimg.com
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
 
 [Mitm]
-hostname = home.mi.com, s3gw.cmbimg.com
+hostname = *.baidu.com, home.mi.com, s3gw.cmbimg.com
