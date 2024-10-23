@@ -2,9 +2,6 @@
 #!desc = 过滤高德地图广告
 #!openUrl = https://apps.apple.com/app/id461703208
 #!tag = 去广告
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.1(745)
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
 #!date = 2024-10-18 22:22:22
 
