@@ -6,7 +6,7 @@
 #!system_version = 
 #!loon_version = 3.2.1(745)
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
-#!date = 2024-09-03 22:22:34
+#!date = 2024-10-18 22:22:22
 
 [Rule]
 # 移除广告下发请求
