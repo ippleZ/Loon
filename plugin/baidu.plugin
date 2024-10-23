@@ -1,9 +1,6 @@
 #!name = 百度搜索去广告
 #!desc = 过滤百度搜索广告
 #!tag = 去广告
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.1(745)
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Baidu.png
 
 [Rewrite]
