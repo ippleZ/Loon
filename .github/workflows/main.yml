@@ -1,0 +1,45 @@
+name: Sync Plugins
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 检出仓库代码
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 安装 curl
+    - name: Install curl
+      run: sudo apt-get install -y curl
+
+    # 下载 README 文件
+    - name: Download README file
+      run: curl -o README.md https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/README.md
+
+    # 提取 .plugin 链接并下载到 Plugin 文件夹（使用指定 UA）
+    - name: Download .plugin files
+      run: |
+        mkdir -p Plugin
+        # 提取 .plugin 链接
+        grep -o 'https:\/\/kelee\.one\/Tool\/Loon\/Plugin\/[^ ]*\.plugin' README.md > plugin_urls.txt
+        # 循环下载 .plugin 文件，使用指定 UA
+        while IFS= read -r url; do
+          echo "Downloading $url"
+          filename=$(basename "$url")
+          curl -H "User-Agent: Loon/762 CFNetwork/1568.200.51 Darwin/24.1.0" -o Plugin/"$filename" "$url" || echo "Failed to download $url"
+        done < plugin_urls.txt
+
+    # 提交并推送更改
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@github.com"
+        git add Plugin/
+        git commit -m "同步插件" || echo "没有更改要提交"
+        git push
