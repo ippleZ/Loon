@@ -1,9 +1,9 @@
-name: Sync Plugins
+name: Sync Rules
 
 on:
   schedule:
-    - cron: '0 17 * * *'
-  workflow_dispatch:
+    - cron: '0 17 * * *' # 每天 UTC 时间 17:00 运行
+  workflow_dispatch: # 支持手动触发
 
 jobs:
   sync:
@@ -20,26 +20,39 @@ jobs:
 
     # 下载 README 文件
     - name: Download README file
-      run: curl -o README.md https://raw.githubusercontent.com/luestr/ProxyResource/refs/heads/main/README.md
+      run: curl -o README.md https://raw.githubusercontent.com/luestr/ShuntRules/refs/heads/main/README.md
 
-    # 提取 .plugin 链接并下载到 Plugin 文件夹（使用指定 UA）
-    - name: Download .plugin files
+    # 提取并下载 .list 文件到 rule/Loon
+    - name: Download .list files
       run: |
-        mkdir -p Plugin
-        # 提取 .plugin 链接
-        grep -o 'https:\/\/kelee\.one\/Tool\/Loon\/Plugin\/[^ ]*\.plugin' README.md > plugin_urls.txt
-        # 循环下载 .plugin 文件，使用指定 UA
+        mkdir -p rule/Loon
+        # 提取 .list 文件链接
+        grep -o 'https:\/\/rule\.kelee\.one\/Loon\/[^ ]*\.list' README.md > loon_list_urls.txt
+        # 循环下载 .list 文件，使用指定 UA
         while IFS= read -r url; do
           echo "Downloading $url"
           filename=$(basename "$url")
-          curl -H "User-Agent: Loon/762 CFNetwork/1568.200.51 Darwin/24.1.0" -o Plugin/"$filename" "$url" || echo "Failed to download $url"
-        done < plugin_urls.txt
+          curl -H "User-Agent: Loon/762 CFNetwork/1568.200.51 Darwin/24.1.0" -o rule/Loon/"$filename" "$url" || echo "Failed to download $url"
+        done < loon_list_urls.txt
+
+    # 提取并下载 .yaml 文件到 rule/Clash
+    - name: Download .yaml files
+      run: |
+        mkdir -p rule/Clash
+        # 提取 .yaml 文件链接
+        grep -o 'https:\/\/rule\.kelee\.one\/Clash\/[^ ]*\.yaml' README.md > clash_yaml_urls.txt
+        # 循环下载 .yaml 文件，使用指定 UA
+        while IFS= read -r url; do
+          echo "Downloading $url"
+          filename=$(basename "$url")
+          curl -H "User-Agent: Loon/762 CFNetwork/1568.200.51 Darwin/24.1.0" -o rule/Clash/"$filename" "$url" || echo "Failed to download $url"
+        done < clash_yaml_urls.txt
 
     # 提交并推送更改
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@github.com"
-        git add Plugin/
-        git commit -m "同步插件" || echo "没有更改要提交"
+        git add rule/Loon/ rule/Clash/
+        git commit -m "同步规则文件" || echo "没有更改要提交"
         git push
