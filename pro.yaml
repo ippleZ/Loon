@@ -1,0 +1,100 @@
+proxy-providers:
+  Sub:
+    type: http
+    url: https://gist.githubusercontent.com/ippleZ/eed51d9c5ea14a9d5d51803d2de67c08/raw/LH
+    interval: 86400
+  Sub2:
+    type: http
+    url: https://www.star-5.xyz/user/sub/api/scribe?token=94368698d676ff799eea823d3019b138
+    interval: 86400
+rule-providers: 
+  OpenAI:
+    type: http
+    url: https://rule.kelee.one/Clash/OpenAI.yaml
+    behavior: classical
+    interval: 86400
+  Claude:
+    type: http
+    url: https://rule.kelee.one/Clash/Claude.yaml
+    behavior: classical
+    interval: 86400
+  Apple:
+    type: http
+    url: https://rule.kelee.one/Clash/Apple.yaml
+    behavior: classical
+    interval: 86400
+  Steam:
+    type: http
+    url: https://rule.kelee.one/Clash/Steam.yaml
+    behavior: classical
+    interval: 86400
+  TikTok:
+    type: http
+    url: https://rule.kelee.one/Clash/TikTok.yaml
+    behavior: classical
+    interval: 86400
+  Global:
+    type: http
+    url: https://rule.kelee.one/Clash/Global.yaml
+    behavior: classical
+    interval: 86400
+proxy-groups:
+  - name: 兜底
+    type: select
+    proxies:
+      - Global
+      - DIRECT
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Global
+  - name: Steam
+    type: select
+    proxies:
+      - DIRECT
+      - Global
+  - name: TikTok
+    type: select
+    proxies:
+      - 港
+      - 日
+      - 新
+      - 美
+  - name: Global
+    type: select
+    proxies:
+      - 港
+      - 日
+      - 新
+      - 美
+      - StarLink
+  - name: 港
+    type: url-test
+    include-all: true
+    filter: '港'
+  - name: 日
+    type: url-test
+    include-all: true
+    filter: '日'
+  - name: 新
+    type: url-test
+    include-all: true
+    filter: '新'
+  - name: 美
+    type: url-test
+    include-all: true
+    filter: '美'
+  - name: StarLink
+    type: url-test
+    include-all: true
+    filter: 'United States'
+rules:
+  - GEOIP,CN,DIRECT
+  - RULE-SET,OpenAI,StarLink
+  - RULE-SET,Claude,StarLink
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Steam,Steam
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Global,Global
+  - MATCH,兜底
