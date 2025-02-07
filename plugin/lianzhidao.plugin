@@ -1,0 +1,5 @@
+[Script]
+http-response ^http?:\/\/api\.lianzhidao123\.com\/v2\/account.*? script-path=lianzhidao.js, requires-body=true, timeout=10, tag=恋知道解锁
+
+[MITM]
+hostname = api.lianzhidao123.com
