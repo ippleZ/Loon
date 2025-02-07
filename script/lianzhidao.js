@@ -1,9 +1,3 @@
-/***
-[rewrite_local]
-^http?:\/\/api\.lianzhidao123\.com\/v2\/account.*? url script-response-body https://raw.githubusercontent.com/ippleZ/Loon/main/script/lianzhidao.js
-[mitm]
-hostname = api.lianzhidao123.com
-*/
 var objc = JSON.parse($response.body);
 
     objc = {
