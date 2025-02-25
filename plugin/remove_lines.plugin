@@ -1,5 +1,0 @@
-[Script]
-http-response ^https:\/\/raw\.githubusercontent\.com\/.+\/.+\/.+\.plugin$ script-path=https://raw.githubusercontent.com/ippleZ/Loon/main/script/remove_lines.js, requires-body=true
-
-[MITM]
-hostname = raw.githubusercontent.com
