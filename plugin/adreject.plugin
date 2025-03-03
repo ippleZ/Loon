@@ -21,4 +21,4 @@ DOMAIN, dldir1v6.qq.com, REJECT
 ^https:\/\/api2\.picooc\.com\/v1\/api\/promotingAd\/toolbar reject-dict
 ^https?:\/\/api2\.picooc\.com\/v\d\/api\/focus\/strategy\/execute reject-dict
 [Mitm]
-hostname = *.baidu.com, home.mi.com
+hostname = *.baidu.com, home.mi.com, api2.picooc.com
