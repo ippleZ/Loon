@@ -13,11 +13,5 @@ DOMAIN, dldir1v6.qq.com, REJECT
 ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace user-agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2017_0\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Mobile/15E148\x20SearchCraft/3.10.1\x20(Baidu;\x20P2\x2017.0)
 # 米家
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
-# PICOOC
-^https:\/\/api2\.picooc\.com\/v1\/api\/function\/getAd reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/activity\/splashAndAdSdk reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/mixData\/downloadTips reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/promotingAd\/toolbar reject-dict
-^https?:\/\/api2\.picooc\.com\/v\d\/api\/focus\/strategy\/execute reject-dict
 [Mitm]
-hostname = *.baidu.com, home.mi.com, api2.picooc.com
+hostname = *.baidu.com, home.mi.com
