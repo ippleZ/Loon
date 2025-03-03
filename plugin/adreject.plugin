@@ -14,11 +14,6 @@ DOMAIN, dldir1v6.qq.com, REJECT
 # 米家
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
 # PICOOC
-
-^https:\/\/api2\.picooc\.com\/v1\/api\/function\/getAd reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/activity\/splashAndAdSdk reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/mixData\/downloadTips reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/promotingAd\/toolbar reject-dict
 ^https?:\/\/api2\.picooc\.com\/v\d\/api\/focus\/strategy\/execute reject-dict
 [Mitm]
 hostname = *.baidu.com, home.mi.com, api2.picooc.com
