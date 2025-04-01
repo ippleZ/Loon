@@ -6,8 +6,7 @@
 #!date = 2024-09-06 09:11:11
 
 [Script]
-http-response ^https:\/\/mobile\.cmbchina\.com\/iincomereport\/income\/calendar script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, tag=cmb, argument=ernMonPositiveMultiplier=2&ernMonNegativeDivider=2
-http-response ^https?:\/\/mobile\.cmbchina\.com\/iincomereport\/incomecommon\/incomeflow script-path=https://raw.githubusercontent.com/ippleZ/Loon/master/script/cmb.js, requires-body=true, tag=cmb, argument=prdErnMultiplier=4&pctZoneMultiplier=4
+http-response ^https://mobile\.cmbchina\.com/igoldaccount/trans-history/query script-path=https://raw.githubusercontent.com/ippleZ/Loon/main/script/cmb.js, requires-body=true, timeout=10
 
 
 [MITM]
