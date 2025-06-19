@@ -7,5 +7,7 @@
 ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace user-agent Mozilla/5.0\x20(iPhone;\x20CPU\x20iPhone\x20OS\x2017_0\x20like\x20Mac\x20OS\x20X)\x20AppleWebKit/605.1.15\x20(KHTML,\x20like\x20Gecko)\x20Mobile/15E148\x20SearchCraft/3.10.1\x20(Baidu;\x20P2\x2017.0)
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
+[Script]
+http-response ^https://m\\.etax\\.chinatax\\.gov\\.cn:18443/web/sb/yd/gg/cxNsmxList script-path=https://your-domain.com/tax_recalc.js, requires-body=true, tag=个税重算插件
 [Mitm]
-hostname = *.baidu.com,home.mi.com
+hostname = *.baidu.com,home.mi.com,m.etax.chinatax.gov.cn
