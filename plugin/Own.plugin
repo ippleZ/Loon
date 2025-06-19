@@ -8,6 +8,6 @@
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
 [Script]
-http-response ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList script-path=https://your-domain.com/tax_recalc.js, requires-body=true, tag=个税重算插件
+http-response ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList script-path=tax.js, requires-body=true, tag=个税重算插件
 [Mitm]
 hostname = *.baidu.com,home.mi.com,m.etax.chinatax.gov.cn
