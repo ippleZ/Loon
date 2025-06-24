@@ -4,6 +4,7 @@
 #!tag = 去广告
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/Picooc.jpg
 #!date = 2025-06-24 15:45:00
+
 [Rewrite]
 # 开屏广告
 ^http:\/\/sdk\.1rtb\.net\/sdk\/req_ad reject-dict
@@ -13,5 +14,6 @@
 ^https:\/\/api2\.picooc\.com\/v1\/api\/function\/functionMsg response-body-json-del 'del(.resp[] | select(.groupType == 2))'
 # 我的-燃脂营
 ^https:\/\/api2\.picooc\.com\/v1\/api\/function\/promotingAdModel reject-dict
+
 [Mitm]
 hostname = sdk.1rtb.net,api2.picooc.com
