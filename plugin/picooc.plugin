@@ -6,10 +6,14 @@
 #!date = 2025-06-24 15:45:00
 
 [Rewrite]
-^http:\/\/sdk\.1rtb\.net\/sdk\/req_ad reject-dict
+# 开屏广告
+^http:\/\/sdk\.1rtb\.net\/sdk\/req_ad reject-dict
+# 首页 Tab 栏推广
 ^https:\/\/api2\.picooc\.com\/v1\/api\/account\/getTabsInfo reject-dict
-^https:\/\/api2\.picooc\.com\/v1\/api\/function\/functionMsg response-body-json-del 'del(.resp[] | select(.groupType == 2))'
-^https:\/\/api2\.picooc\.com\/v1\/api\/function\/promotingAdModel reject-dict
+# 我的-健康服务模块
+^https:\/\/api2\.picooc\.com\/v1\/api\/function\/functionMsg response-body-json-jq 'del(.resp[] | select(.groupType == 2))'
+# 我的-燃脂营推广广告
+^https:\/\/api2\.picooc\.com\/v1\/api\/function\/promotingAdModel reject-dict
 
 [Mitm]
-hostname = sdk.1rtb.net,api2.picooc.com
+hostname = sdk.1rtb.net, api2.picooc.com
