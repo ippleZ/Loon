@@ -1,8 +1,8 @@
 #!name = Picooc去广告
-#!desc = 移除开屏广告，我的页面推广
-#!openUrl = https://apps.apple.com/app/id847764912
+#!desc = 移除开屏广告，推广
+#!openUrl = https://apps.apple.com/app/id729928969
 #!tag = 去广告
-#!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
+#!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/Picooc.jpg
 #!date = 2025-06-24 15:45:00
 [Rewrite]
 # 开屏广告
