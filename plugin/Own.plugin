@@ -3,7 +3,6 @@
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-7-28 18:59:59
 [Rule]
-DOMAIN-SUFFIX,hsbc.com.hk,direct
 DOMAIN-SUFFIX,emby.zn.al,全球加速
 [Rewrite]
 # 百度搜索 //*.baidu.com
