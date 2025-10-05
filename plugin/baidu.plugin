@@ -1,5 +1,5 @@
 #!name = 百度搜索去广告
-#!desc = 各种自己用的应用
+#!desc = 移除百度搜索移动端网页的首页广告信息流
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-10-04 13:59:59
 [Rewrite]
