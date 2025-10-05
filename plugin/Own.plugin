@@ -3,7 +3,7 @@
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-10-04 13:30:00
 [Rule]
-DOMAIN-SUFFIX,roogoo.com,SG
+DOMAIN-SUFFIX,roogoo.com,JP
 DOMAIN-SUFFIX,wise.com,DIRECT
 DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
 DOMAIN-SUFFIX,interactivebrokers.com,StarLink
