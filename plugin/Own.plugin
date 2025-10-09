@@ -6,7 +6,7 @@
 DOMAIN-SUFFIX,roogoo.com,JP
 DOMAIN-SUFFIX,wise.com,DIRECT
 DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com,StarLink
+DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
 DOMAIN-SUFFIX,ibkr.com,DIRECT
 [Rewrite]
 # 米家 //home.mi.com
