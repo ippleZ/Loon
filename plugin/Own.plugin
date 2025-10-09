@@ -6,8 +6,9 @@
 DOMAIN-SUFFIX,roogoo.com,JP
 DOMAIN-SUFFIX,wise.com,DIRECT
 DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
 DOMAIN-SUFFIX,ibkr.com,DIRECT
+DOMAIN-SUFFIX,ibllc.com,DIRECT
+DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
 [Rewrite]
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
