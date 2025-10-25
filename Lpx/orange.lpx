@@ -1,11 +1,10 @@
-#!name = 自己用
-#!desc = 各种自己用的应用
+#!name = 去广告
+#!desc = 广告过滤器
+#!tag = 去广告
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-10-04 13:30:00
 [Rewrite]
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
-[Script]
-http-response ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList script-path=tax.js, requires-body=true, tag=个人所得税
 [Mitm]
-hostname = home.mi.com,m.etax.chinatax.gov.cn
+hostname = home.mi.com
