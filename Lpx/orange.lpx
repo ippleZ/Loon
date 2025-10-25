@@ -2,13 +2,6 @@
 #!desc = 各种自己用的应用
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-10-04 13:30:00
-[Rule]
-DOMAIN-SUFFIX,roogoo.com,JP
-DOMAIN-SUFFIX,wise.com,DIRECT
-DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
-DOMAIN-SUFFIX,ibkr.com,DIRECT
-DOMAIN-SUFFIX,ibllc.com,DIRECT
-DOMAIN-SUFFIX,interactivebrokers.com,DIRECT
 [Rewrite]
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
