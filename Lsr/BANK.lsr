@@ -1,4 +1,6 @@
 # 汇丰香港
-DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
+#ROOGOO
+DOMAIN-SUFFIX,roogoo.com,JP
 # WISE
-DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,wise.com,DIRECT
