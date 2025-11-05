@@ -2,8 +2,6 @@
 #!desc = 规则、插件
 #!icon = https://raw.githubusercontent.com/ippleZ/Loon/main/icon/orange.jpg
 #!date = 2025-10-04 13:30:00
-[Host]
-iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
 [Rule]
 #ROOGOO
 DOMAIN-SUFFIX,roogoo.com,JP
