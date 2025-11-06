@@ -5,6 +5,8 @@
 [Rule]
 #ROOGOO
 DOMAIN-SUFFIX,roogoo.com,JP
+#SafePal
+DOMAIN-SUFFIX,safepal.com,JP
 #TopNod
 DOMAIN-SUFFIX,topnod.com,JP
 [Rewrite]
