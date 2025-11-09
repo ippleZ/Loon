@@ -1,5 +1,7 @@
 # 汇丰香港
 DOMAIN-SUFFIX,hsbc.com.hk
+# 汇立银行
+DOMAIN-SUFFIX,welab.bank
 # 众安银行
 DOMAIN-SUFFIX,za.group
 # WISE
