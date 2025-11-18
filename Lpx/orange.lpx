@@ -4,11 +4,11 @@
 #!date = 2025-10-04 13:30:00
 [Rule]
 #ROOGOO
-DOMAIN-SUFFIX,roogoo.com,JP
+DOMAIN-SUFFIX,roogoo.com,亚洲
 #SafePal
-DOMAIN-SUFFIX,safepal.com,JP
+DOMAIN-SUFFIX,safepal.com,亚洲
 #TopNod
-DOMAIN-SUFFIX,topnod.com,JP
+DOMAIN-SUFFIX,topnod.com,亚洲
 [Rewrite]
 # 米家 //home.mi.com
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
